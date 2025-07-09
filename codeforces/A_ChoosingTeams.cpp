@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#define fr(i,x,n)for(int i=x; i<(int)n; ++i)
+#define fi(i,x,n,inc)for(int i=x; i<(int)n; i+=inc)
+#define in >>
+#define p <<
+#define fp(a,b,t,x) for(pair<a,b>t:x)
+#define mps(a,b,x) map<a,b>x;
+#define vp(x) vector<pair<int,int>>x;
+#define v(x,d) vector<d>x;
+#define fastio()ios::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
+typedef double db;
+using namespace std;
+
+int main(){
+    fastio()
+    int n,a,k;cin in n in k;
+    v(x,int);
+    fr(i,0,n){
+        cin in a; 
+        if(a!=5)x.push_back(a);
+    }
+    //erase person that has 5 participated
+    sort(x.begin(),x.end());
+    int ct=0;
+    fr(i,0,x.size())x[i]+=k;
+    fr(i,0,x.size())if(x[i]<=5)ct++;
+    cout p ct/3 p "\n";
+    return 0;
+}

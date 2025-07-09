@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#define fr(i,x,n)for(int i=x; i<(int)n; ++i)
+#define fi(i,x,n)for(int i=x-1; i>=n; --i)
+#define finc(i,x,n,c)for(int i=x; i<(int)n; i+=c)
+#define in >>
+#define p <<
+#define fp(a,b,t,x) for(pair<a,b>t:x)
+#define mps(a,b,x) map<a,b>x;
+#define vp(x) vector<pair<int,int>>x;
+#define v(x,d) vector<d>x;
+#define fastio()ios::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
+typedef double db;
+using namespace std;
+
+int main(){
+    fastio()
+    int t,n;cin in t;
+    while (t--){
+        cin in n;
+        if(n/2%2==0){
+            cout p "YES\n";
+            v(x,int);
+            fr(i,0,n/2)x.push_back((i+1)*2);
+            fr(i,1,n+2)if(i%2==1&&i!=(n/2)+1)x.push_back(i);
+            fr(i,0,x.size()){
+                if(i!=(int)x.size()-1)
+                cout p x[i] p" ";
+                else cout p x[i]p "\n";
+            }
+        }
+        else cout p "NO\n";
+    }
+    return 0;
+}

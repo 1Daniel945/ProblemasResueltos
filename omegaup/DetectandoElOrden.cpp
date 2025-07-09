@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+#define fr(i,x,n)for(int i=x; i<(int)n; ++i)
+#define fi(i,x,n,inc)for(int i=x; i<(int)n; i+=inc)
+#define in >>
+#define p <<
+#define fp(a,b,t,x) for(pair<a,b>t:x)
+#define mps(a,b,x) map<a,b>x;
+#define vp(x) vector<pair<int,int>>x;
+#define v(x,d) vector<d>x;
+#define fastio()ios::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
+typedef double db;
+using namespace std;
+
+int main(){
+    fastio();
+    int a[3];
+    fr(i,0,3)cin in a[i];
+    int x=0;
+    fr(i,0,2)if(a[i]==a[i+1])x++;
+    if(x==2)cout p "I\n";
+    else{
+        if(is_sorted(a,a+3))cout p "C\n";
+        else if(is_sorted(a,a+3,greater<int>()))cout p "D\n";
+        else cout p "X\n";
+    }
+    return 0;
+}

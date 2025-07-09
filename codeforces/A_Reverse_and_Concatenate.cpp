@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#define fr(i, x, n)for(int i = x; i< (int) n; ++i)
+#define fi(i, x, n)for(int i = (int) x - 1; i >= n; --i)
+#define in >>
+#define p <<
+#define fp(a, b, t, x) for(pair<a, b>t : x)
+#define fast_io ios::sync_with_stdio(0); cin.tie(0);
+#define cAll(a, b) count(a.begin(), a.end(), b)
+#define ff first
+#define ss second
+typedef long long ll;
+using namespace std;
+
+void solve(){
+    int t, n, k; cin in t;
+    string s, s1;
+    while(t--){
+        cin in n in k in s;
+        s1 = s;
+        reverse(s1.begin(), s1.end());
+        if(s == s1 || k == 0) cout p "1\n";
+        else cout p "2\n";
+    }
+}
+
+int main(){
+    fast_io
+    solve();
+    return 0;
+}
