@@ -1,0 +1,16 @@
+#include <stdio.h>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	int n;
+	scanf("%d",&n);
+	for(int i=0; i<n; i++){
+		if((i+1)%2==1){
+			printf("Invitado #%d ¡Felicidades! Eres el número %d y estás invitado a la Zona de Juegos.\n",i+1,i+1);
+		}
+		else{
+			printf("Invitado #%d: ¡Felicidades! Eres el número %d y estás invitado a la Pista de Baile.");
+		}
+	}
+	return 0;
+}
