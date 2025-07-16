@@ -28,8 +28,8 @@ void solve(){
         int c = 0, c1 = 0, x, y;
         sort(a.begin(), a.end());
         while(true){
-            x = *max_element(a.begin(), a.end());
-            y = *min_element(a.begin(), a.end());
+            x = a[a.size() - 1];
+            y = a[0];
             if((x + y) % 2 == 0){
                 break;
             }
@@ -38,8 +38,8 @@ void solve(){
         }
         sort(b.begin(), b.end(), greater<int>());
         while(true){
-            x = *max_element(b.begin(), b.end());
-            y = *min_element(b.begin(), b.end());
+            x = a[a.size() - 1];
+            y = a[0];
             if((x + y) % 2 == 0){
                 break;
             }
