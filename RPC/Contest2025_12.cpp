@@ -54,32 +54,27 @@ void solveE(){
 }
 
 void solveD(){
-    string s, s1 = "", s2 = "";
+    string s, s1 = "", s2 = "", s3 = "", s4 = "";
     cin in s;
     map<char, int>mp;
-    fr(i, 0, s.size()){
-        mp[s[i]]++;
-    }
-    int x;
+    fr(i, 0, s.size()) mp[s[i]]++;
     for(auto e : mp){
-        x = 0;
-        if(e.ss > 1){
-            while(e.ss > 0){
-                if(x % 2 == 0) s1 += e.ff;
-                else s2 += e.ff;
-                x++;
-                e.ss--;
-            }
+        while(e.ss >= 2){
+            s1 += e.ff;
+            s2 += e.ff;
+            e.ss -= 2;
+        }
+        if(e.ss == 1){
+            s4 += e.ff;
+            e.ss--;
         }
     }
-    for(auto e : mp){
-        if(e.ss == 1) s1 += e.ff;
-    }
     reverse(s2.begin(), s2.end());
-    s = s1 + s2;
-    s2 = s;
-    reverse(s.begin(), s.end());
-    s2 == s ? cout p "yes\n" : cout p "no\n";
+    s1 += s4;
+    s3 = s1 + s2;
+    s2 = s3;
+    reverse(s2.begin(), s2.end());
+    s2 == s3 ? cout p "yes\n" : cout p "no\n";
 }
 
 void solveK(){
@@ -94,8 +89,27 @@ void solveK(){
     }
 }
 
+void solveC(){
+    int n, m, x, y, ans = 0;
+    string s;
+    cin in n in m;
+    while(m--){
+        cin in s in x in y;
+        if(s == "Q"){//Reina
+
+        }
+        else if(s == "R") {//Torre
+            ans += n * 2;
+        }
+        else if(s == "N"){//Caballo
+            ans += 1;
+        }
+    }
+    cout p ans p "\n";
+}
+
 int main(){
     fast_io
-    solveD();
+    solveC();
     return 0;
 }
