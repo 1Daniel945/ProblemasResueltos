@@ -17,15 +17,18 @@ typedef unsigned long long ull;
 using namespace std;
 
 ull lim = (ull) 2e64;
+int MOD = 1e9 + 7;
 
 void solve(){
-   queue<int>q;
-   string s;
-   map<char, int>mp;
+    vector<int>a(3);
+    fr(i, 0, 3) cin in a[i];
+    sort(a.begin(), a.end());
+    if(a[2] > a[0] + a[1]) cout p "S\n";
+    else cout p "N\n";
 }
 
-int32_t main() {
+int main(){
     fast_io
     solve();    
     return 0;
-}  
+}
