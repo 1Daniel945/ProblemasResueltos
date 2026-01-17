@@ -21,7 +21,26 @@ ull lim = (ull) 2e64;
 int MOD = 1e9 + 7;
 
 void solve() {
-    
+    int t; cin in t;
+    string s, s1;
+    vector<char>l = {'A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'};
+    while(t--) {
+        cin in s;
+        s1 = s;
+        reverse(s1.begin(), s1.end());
+        if(s != s1) cout p "no\n";
+        else {
+            bool b = 0;
+            fr(i, 0, s.size()) {
+                if(find(l.begin(), l.end(), s[i]) == l.end()) {
+                    cout p "no\n";
+                    b = 1;
+                    break;
+                }
+            }
+            if(b == 0) cout p "yes\n";
+        }
+    }
 }
 
 int32_t main() {
